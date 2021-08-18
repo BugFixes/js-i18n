@@ -20,25 +20,23 @@ module.exports = [
       babel({
         babelHelpers: 'runtime',
         extensions: [
-          '.ts'
+          '.ts',
         ],
         presets: [[
           '@bugfixes',
           {
             useRuntimeESModules: false,
-          }
-        ]]
-      })
-    ]
+          },
+        ]],
+      }),
+    ],
   },
   {
     ...baseConfig,
     input: './src/index.ts',
     output: {
       file: pkg.module,
-      format: 'es'
-    }
-  }
+      format: 'es',
+    },
+  },
 ]
-
-

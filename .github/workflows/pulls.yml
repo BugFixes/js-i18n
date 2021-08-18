@@ -26,6 +26,8 @@ jobs:
           npm run prepare --if-present
       - name: tests
         run: npm test
+      - name: lint
+        run: npm run lint
   automerge:
     runs-on: ubuntu-latest
     needs: test

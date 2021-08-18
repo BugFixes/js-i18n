@@ -23,8 +23,8 @@ module.exports = [
         presets: [[
           '@bugfixes',
           {
-            useRuntimeESModules: false
-          }
+            useRuntimeESModules: false,
+          },
         ]],
       }),
     ],

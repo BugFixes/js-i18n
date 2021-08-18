@@ -17,7 +17,7 @@ module.exports = {
     'moo',
     'path',
     'react',
-    'react/jsx-runtime'
+    'react/jsx-runtime',
   ],
   plugins: [
     typescript(),
@@ -26,7 +26,7 @@ module.exports = {
       babelHelpers: 'runtime',
       extensions: [
         '.ts',
-        '.tsx'
+        '.tsx',
       ],
       presets: [
         [

@@ -3,7 +3,7 @@ const baseConfig = require('../../jest.config')
 module.exports = {
   ...baseConfig,
   collectCoverageFrom: [
-    'src/**/*.ts'
+    'src/**/*.ts',
   ],
-  globalSetup: './test-setup.js'
+  globalSetup: './test-setup.js',
 }

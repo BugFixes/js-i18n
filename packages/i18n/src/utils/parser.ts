@@ -63,12 +63,7 @@ export type CallExpression = {
   type: typeof callExpressionType,
 }
 
-export type Expression = CallExpression
-  | Literal
-  | TemplateLiteral
-  | ObjectExpression
-  | ArrayExpression
-  | Identifier
+export type Expression = CallExpression | Literal | TemplateLiteral | ObjectExpression | ArrayExpression | Identifier
 
 /**
  * Throw an error when invalid syntax is encountered.

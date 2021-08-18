@@ -1,6 +1,6 @@
 import tokenize from '../src/utils/tokenizer'
 import type {
-  Token
+  Token,
 } from 'moo'
 
 type SimplifiedToken = {

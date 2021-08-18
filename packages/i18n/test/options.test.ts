@@ -1,6 +1,6 @@
 import {
   date,
-  number
+  number,
 } from '@bugfixes/i18n-formats'
 import I18n from '../src'
 
