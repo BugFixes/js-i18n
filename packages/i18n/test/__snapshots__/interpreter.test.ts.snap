@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interpreter correctly interprets a boolean literal AST 1`] = `
+Array [
+  true,
+]
+`;
+
+exports[`Interpreter correctly interprets a function call AST 1`] = `
+Array [
+  "test result",
+]
+`;
+
+exports[`Interpreter correctly interprets a null literal AST 1`] = `
+Array [
+  null,
+]
+`;
+
+exports[`Interpreter correctly interprets a number literal AST 1`] = `
+Array [
+  2.45,
+]
+`;
+
+exports[`Interpreter correctly interprets a string literal AST 1`] = `
+Array [
+  "foobar",
+]
+`;
+
+exports[`Interpreter correctly interprets a string template literal AST 1`] = `
+Array [
+  "The quick ,brown, fox jumps over the lazy dog",
+]
+`;
+
+exports[`Interpreter correctly interprets an array AST 1`] = `
+Array [
+  Array [
+    "foo",
+    "bar",
+  ],
+]
+`;
+
+exports[`Interpreter correctly interprets an identifier AST 1`] = `
+Array [
+  "bar",
+]
+`;
+
+exports[`Interpreter correctly interprets an object AST 1`] = `
+Array [
+  Object {
+    "bar": true,
+    "foo": 2.45,
+  },
+]
+`;
+
+exports[`Interpreter correctly interprets an undefined literal AST 1`] = `
+Array [
+  undefined,
+]
+`;

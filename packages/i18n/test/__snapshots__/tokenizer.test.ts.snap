@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tokenizer correctly tokenizes a plain translation body 1`] = `
+Array [
+  Object {
+    "type": "string",
+    "value": "The quick brown fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Tokenizer correctly tokenizes a translation body with an interpolated function call 1`] = `
+Array [
+  Object {
+    "type": "string",
+    "value": "The quick ",
+  },
+  Object {
+    "type": "expressionStart",
+    "value": "\${",
+  },
+  Object {
+    "type": "functionCall",
+    "value": "getSubject",
+  },
+  Object {
+    "type": "parenEnd",
+    "value": ")",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "}",
+  },
+  Object {
+    "type": "string",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Tokenizer correctly tokenizes a translation body with an interpolated function call containing arguments 1`] = `
+Array [
+  Object {
+    "type": "string",
+    "value": "The quick ",
+  },
+  Object {
+    "type": "expressionStart",
+    "value": "\${",
+  },
+  Object {
+    "type": "functionCall",
+    "value": "t",
+  },
+  Object {
+    "type": "string",
+    "value": "foo.bar",
+  },
+  Object {
+    "type": "comma",
+    "value": ", ",
+  },
+  Object {
+    "type": "curlyStart",
+    "value": "{ ",
+  },
+  Object {
+    "type": "propertyName",
+    "value": "count",
+  },
+  Object {
+    "type": "number",
+    "value": "2",
+  },
+  Object {
+    "type": "comma",
+    "value": ", ",
+  },
+  Object {
+    "type": "propertyName",
+    "value": "name",
+  },
+  Object {
+    "type": "string",
+    "value": "Foobar",
+  },
+  Object {
+    "type": "comma",
+    "value": ", ",
+  },
+  Object {
+    "type": "propertyName",
+    "value": "locales",
+  },
+  Object {
+    "type": "bracketStart",
+    "value": "[",
+  },
+  Object {
+    "type": "string",
+    "value": "en-GB",
+  },
+  Object {
+    "type": "comma",
+    "value": ", ",
+  },
+  Object {
+    "type": "string",
+    "value": "pt-PT",
+  },
+  Object {
+    "type": "bracketEnd",
+    "value": "]",
+  },
+  Object {
+    "type": "comma",
+    "value": ", ",
+  },
+  Object {
+    "type": "curlyStart",
+    "value": "{ ",
+  },
+  Object {
+    "type": "propertyName",
+    "value": "meta",
+  },
+  Object {
+    "type": "curlyStart",
+    "value": "{ ",
+  },
+  Object {
+    "type": "propertyName",
+    "value": "test",
+  },
+  Object {
+    "type": "boolean",
+    "value": "true",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "} ",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "} ",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "}",
+  },
+  Object {
+    "type": "parenEnd",
+    "value": ")",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "}",
+  },
+  Object {
+    "type": "string",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Tokenizer correctly tokenizes a translation body with an interpolated identifier 1`] = `
+Array [
+  Object {
+    "type": "string",
+    "value": "The quick ",
+  },
+  Object {
+    "type": "expressionStart",
+    "value": "\${",
+  },
+  Object {
+    "type": "identifier",
+    "value": "foxColour",
+  },
+  Object {
+    "type": "curlyEnd",
+    "value": "}",
+  },
+  Object {
+    "type": "string",
+    "value": " fox jumps over the lazy dog",
+  },
+]
+`;

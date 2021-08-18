@@ -70,6 +70,6 @@ export function getPluralRule(
     return pluralRuleFn(value, useOrdinal)
   }
 
-  // Including polyfills for all languages would cause a lot of bloat, we only support specific languages in use at Bud
+  // Including polyfills for all languages would cause a lot of bloat, we only support specific languages in use at Bugfixes
   throw new Error(`Unsupported locale: ${locale}`)
 }

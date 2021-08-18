@@ -40,7 +40,7 @@
   "devDependencies": {
     "@bugfixes/i18n-formats": "^0.0.1",
     "@bugfixes/i18n-utils": "^0.0.1",
-    "@bugfixes/object-utils": "^0.1.4",
+    "@bugfixes/object-utils": "^0.1.6",
     "moo": "^0.5.1"
   }
 }

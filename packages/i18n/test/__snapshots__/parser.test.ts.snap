@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parser correctly parses a plain translation body 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick brown fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated boolean 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "It is ",
+  },
+  Object {
+    "type": "Literal",
+    "value": false,
+  },
+  Object {
+    "type": "Literal",
+    "value": " that the quick brown fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "arguments": Array [],
+    "callee": "getFoxColor",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call with an array as argument 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "You have ",
+  },
+  Object {
+    "arguments": Array [
+      Object {
+        "elements": Array [
+          Object {
+            "type": "Literal",
+            "value": 10,
+          },
+          Object {
+            "type": "Literal",
+            "value": 14,
+          },
+          Object {
+            "type": "Literal",
+            "value": 3,
+          },
+        ],
+        "type": "ArrayExpression",
+      },
+    ],
+    "callee": "getTotal",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " total messages",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call with an array containing shorthand \`undefined\` values as argument 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "You have ",
+  },
+  Object {
+    "arguments": Array [
+      Object {
+        "elements": Array [
+          Object {
+            "type": "Literal",
+            "value": undefined,
+          },
+          Object {
+            "type": "Literal",
+            "value": undefined,
+          },
+        ],
+        "type": "ArrayExpression",
+      },
+    ],
+    "callee": "getTotal",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " total messages",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call with an object as argument 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "arguments": Array [
+      Object {
+        "properties": Object {
+          "color": Object {
+            "type": "Literal",
+            "value": "brown",
+          },
+          "species": Object {
+            "type": "Literal",
+            "value": "fox",
+          },
+        },
+        "type": "ObjectExpression",
+      },
+    ],
+    "callee": "getAnimal",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call with arguments 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "arguments": Array [
+      Object {
+        "type": "Literal",
+        "value": "fox",
+      },
+      Object {
+        "type": "Literal",
+        "value": "brown",
+      },
+    ],
+    "callee": "getAnimal",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated function call with arguments containing shorthand \`undefined\` values 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "arguments": Array [
+      Object {
+        "type": "Literal",
+        "value": undefined,
+      },
+      Object {
+        "type": "Literal",
+        "value": undefined,
+      },
+      Object {
+        "type": "Literal",
+        "value": undefined,
+      },
+    ],
+    "callee": "getAnimal",
+    "type": "CallExpression",
+  },
+  Object {
+    "type": "Literal",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated identifier 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "name": "animalColor",
+    "type": "Identifier",
+  },
+  Object {
+    "type": "Literal",
+    "value": " fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated null value 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "This is a ",
+  },
+  Object {
+    "type": "Literal",
+    "value": null,
+  },
+  Object {
+    "type": "Literal",
+    "value": " interpolation",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated number 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick brown fox jumps ",
+  },
+  Object {
+    "type": "Literal",
+    "value": 2.5,
+  },
+  Object {
+    "type": "Literal",
+    "value": " meters over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated string 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The quick ",
+  },
+  Object {
+    "type": "Literal",
+    "value": "brown",
+  },
+  Object {
+    "type": "Literal",
+    "value": " fox jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated string template 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "The ",
+  },
+  Object {
+    "parts": Array [
+      Object {
+        "type": "Literal",
+        "value": "quick ",
+      },
+      Object {
+        "name": "animalColor",
+        "type": "Identifier",
+      },
+      Object {
+        "type": "Literal",
+        "value": " ",
+      },
+      Object {
+        "name": "animalSpecies",
+        "type": "Identifier",
+      },
+    ],
+    "type": "TemplateLiteral",
+  },
+  Object {
+    "type": "Literal",
+    "value": " jumps over the lazy dog",
+  },
+]
+`;
+
+exports[`Parser correctly parses a translation body with an interpolated undefined value 1`] = `
+Array [
+  Object {
+    "type": "Literal",
+    "value": "This is an ",
+  },
+  Object {
+    "type": "Literal",
+    "value": undefined,
+  },
+  Object {
+    "type": "Literal",
+    "value": " interpolation",
+  },
+]
+`;

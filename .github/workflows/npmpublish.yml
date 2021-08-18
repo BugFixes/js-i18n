@@ -28,6 +28,8 @@ jobs:
       - name: version
         run: |
           npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/formats
+      - name: build
+        run: npm run build
       - name: publish
         run: |
           npm publish ./packages/formats
