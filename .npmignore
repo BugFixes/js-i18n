@@ -1,0 +1,13 @@
+.commitlintrs.js
+.eslintrc.js
+.github
+.husky
+.versionrc.js
+CODEOWNERS
+packages/*/coverage
+packages/*/src
+packages/*/test
+packages/*/babel.config.js
+packages/*/jest.config.js
+packages/*/rollup.config.js
+packages/*/tsconfig.json
