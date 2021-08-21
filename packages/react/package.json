@@ -1,11 +1,11 @@
 {
-  "name": "@bugfixes/i18n",
+  "name": "@bugfixes/i18n-react",
   "version": "0.0.1",
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
-  "main": "./lib/index.js",
+  "main": "./lib/main/index.js",
   "module": "./lib/module/index.js",
   "types": "./lib/types/index.d.ts",
   "files": [
@@ -22,25 +22,28 @@
   "keywords": [
     "bugfixes",
     "util",
-    "i18n",
     "intl",
     "formatting"
   ],
   "scripts": {
     "build": "npm run build:main && npm run build:types",
     "build:main": "rollup -c",
-    "build:types": "tsc src/*.ts --declaration true --declarationDir './lib/types' --emitDeclarationOnly true --esModuleInterop true --moduleResolution Node --target ESNext",
+    "build:types": "tsc src/*.tsx --declaration true --declarationDir './lib/types' --emitDeclarationOnly true --jsx 'react' --esModuleInterop true --moduleResolution Node --target ESNext",
     "test": "npm run test:units",
     "test:units": "jest"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.15.3",
-    "core-js": "^3.16.2"
+    "@bugfixes/i18n": "^0.0.1",
+    "core-js": "^3.16.2",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@bugfixes/i18n": "^0.0.1",
+    "@types/react": "^17.0.18"
   },
   "dependencies": {
-    "@bugfixes/i18n-formats": "^0.0.1",
-    "@bugfixes/i18n-utils": "^0.0.1",
-    "@bugfixes/object-utils": "^0.1.6",
-    "moo": "^0.5.1"
+    "@bugfixes/react-utils": "^0.1.6",
+    "hoist-non-react-statics": "^3.3.2"
   }
 }
