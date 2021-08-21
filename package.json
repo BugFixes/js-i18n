@@ -18,6 +18,7 @@
     "build": "npm run build:formats && npm run build:utils",
     "build:formats": "cd ./packages/formats && npm run build",
     "build:utils": "cd ./packages/utils && npm run build",
+    "test": "lerna run test --stream",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublish": "npm run build",

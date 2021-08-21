@@ -29,7 +29,6 @@
     "build": "npm run build:main && npm run build:types",
     "build:main": "rollup -c",
     "build:types": "tsc src/*.tsx --declaration true --declarationDir './lib/types' --emitDeclarationOnly true --jsx 'react' --esModuleInterop true --moduleResolution Node --target ESNext",
-    "test": "npm run test:units",
     "test:units": "jest"
   },
   "peerDependencies": {
