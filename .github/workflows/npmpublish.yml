@@ -23,8 +23,8 @@ jobs:
         run: |
           npm rebuild
           npm run prepare --if-present
-      - name: tests
-        run: npm run test --if-present
+#      - name: tests
+#        run: npm run test --if-present
       - name: version
         run: |
           npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/formats
