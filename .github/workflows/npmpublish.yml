@@ -24,7 +24,13 @@ jobs:
           npm rebuild
           npm run prepare --if-present
       - name: tests
-        run: npm test
+        run: |
+          cd ./packages/formats && npm run test --if-present && cd ../../
+          cd ./packages/express && npm run test --if-present && cd ../../
+          cd ./packages/i18n && npm run test --if-present && cd ../../
+          cd ./packages/loader && npm run test --if-present && cd ../../
+          cd ./packages/react && npm run test --if-present && cd ../../
+          cd ./packages/utils && npm run test --if-present && cd ../../
       - name: version
         run: |
           npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/formats
