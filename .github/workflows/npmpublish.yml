@@ -28,10 +28,20 @@ jobs:
       - name: version
         run: |
           npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/formats
+          npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/express
+          npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/i18n
+          npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/loader
+          npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/react
+          npm --no-git-tag-version version ${GITHUB_REF##*/v} -workspace ./packages/utils
       - name: build
         run: npm run build
       - name: publish
         run: |
           npm publish ./packages/formats
+          npm publish ./packages/express
+          npm publish ./packages/i18n
+          npm publish ./packages/loader
+          npm publish ./packages/react
+          npm publish ./packages/utils
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
